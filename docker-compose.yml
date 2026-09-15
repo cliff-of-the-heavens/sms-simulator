@@ -1,0 +1,18 @@
+services:
+  sms-simulator:
+    build: .
+    container_name: sms-simulator
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_PORT: 8080
+      SMS_RETENTION_ENABLED: "true"
+      SMS_RETENTION_DAYS: 1
+      SMS_MAX_MESSAGES: 10000
+      SMS_DATA_DIR: /data
+    volumes:
+      - sms-data:/data
+    restart: unless-stopped
+
+volumes:
+  sms-data:

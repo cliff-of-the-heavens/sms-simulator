@@ -453,12 +453,12 @@ function IntegrationModal({ onClose }) {
   const endpoint = `${baseUrl}/sms/send`;
 
   const getUrl =
-    `${endpoint}?AppName=MO626&MSISDN=265998866442&SMS=` +
+    `${endpoint}?AppName=CCAP&MSISDN=265000000000&SMS=` +
     encodeURIComponent("Payment successful.\nAmount: MWK 50,000\nReference: TXN123456");
 
   const postBody = `{
-  "appName": "MO626",
-  "msisdn": "265998866442",
+  "appName": "CCAP",
+  "msisdn": "265000000000",
   "sms": "Payment successful.\\nAmount: MWK 50,000\\nReference: TXN123456"
 }`;
 

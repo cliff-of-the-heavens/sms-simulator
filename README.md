@@ -3,7 +3,7 @@
 A lightweight SMS gateway simulator for development and integration testing.
 
 ## Features
-- GET endpoint: `/sms/send?AppName=MO626&MSISDN=265998866442&SMS=<text>`
+- GET endpoint: `/sms/send?AppName=CCAP&MSISDN=265000000000&SMS=<text>`
 - POST JSON endpoint
 - Real-time inbox updates with SSE
 - Search by AppName, MSISDN, or message
@@ -25,7 +25,7 @@ Open `http://localhost:8080`.
 ## Test
 
 ```bash
-curl "http://localhost:8080/sms/send?AppName=MO626&MSISDN=265998866442&SMS=Payment%20successful.%0AAmount%3A%20MWK%2050%2C000"
+curl "http://localhost:8080/sms/send?AppName=CCAP&MSISDN=265000000000&SMS=Payment%20successful.%0AAmount%3A%20MWK%2050%2C000"
 ```
 
 POST alternative:
@@ -33,7 +33,7 @@ POST alternative:
 ```bash
 curl -X POST http://localhost:8080/sms/send \
   -H "Content-Type: application/json" \
-  -d '{"appName":"MO626","msisdn":"265998866442","sms":"Line one\nLine two"}'
+  -d '{"appName":"CCAP","msisdn":"265000000000","sms":"Line one\nLine two"}'
 ```
 
 ## Configuration
